@@ -52,3 +52,13 @@ plt.ylabel("Frequency")
 plt.colorbar()
 plt.savefig("spectrogram.png")
 plt.show()
+
+#log-spectrogram
+log_spectrogram = librosa.amplitude_to_db(spectrogram)
+librosa.display.specshow(log_spectrogram,sr=sr,hop_length=hop_length)
+plt.title("Log Spectrogram")
+plt.xlabel("Time")
+plt.ylabel("Frequency")
+plt.colorbar()
+plt.savefig("log-spectrogram.png")
+plt.show()
